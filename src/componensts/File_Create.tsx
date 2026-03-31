@@ -24,7 +24,7 @@ export default function File_Create() {
         handlePdfChange(e)
     }
      else {
-      alert("Поддерживаются только .txt и .docx файлы");
+      alert("sorry your type file not supporting");
     }
   };   
 
