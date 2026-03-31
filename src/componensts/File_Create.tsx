@@ -1,9 +1,6 @@
 import { useFileReader, usePdfReader, useWordReader, useHtmlReader } from "../utils";
 
 
-
-
-
 export default function File_Create() {
 
     const { file: txtFile, handleTxtChange } = useFileReader();
