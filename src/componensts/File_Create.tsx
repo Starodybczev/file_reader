@@ -1,6 +1,4 @@
-import { useFileReader } from "../utils/hooks/useFileReader"
-import { usePdfReader } from "../utils/hooks/usePdfReader";
-import { useWordReader } from "../utils/hooks/useWordReader"
+import { useFileReader, usePdfReader, useWordReader } from "../utils";
 
 
 
