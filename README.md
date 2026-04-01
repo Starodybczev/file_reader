@@ -11,12 +11,6 @@
 
 ---
 
-## 📸 Скриншоты
-> *Здесь можно разместить скриншот вашего интерфейса*
-![Preview](https://via.placeholder.com/800x400?text=File+Reader+Interface+Preview)
-
----
-
 ## 🚀 Основной функционал
 
 * **Мультиформатность:** Поддержка файлов `PDF`, `Word (.docx)`, `HTML` и `JSON`.
