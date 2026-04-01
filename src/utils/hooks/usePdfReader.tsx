@@ -19,7 +19,7 @@ export function usePdfReader() {
       // Здесь главное: отключаем воркер
       // @ts-ignore
       const pdf = await getDocument({ data: arrayBuffer, useWorker: false }).promise;
-
+      
       let text = "";
       for (let i = 1; i <= pdf.numPages; i++) {
         const page = await pdf.getPage(i);
