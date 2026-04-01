@@ -17,6 +17,7 @@ export function usePdfReader() {
       const arrayBuffer = await selectedFile.arrayBuffer();
 
       // Здесь главное: отключаем воркер
+      // @ts-ignore
       const pdf = await getDocument({ data: arrayBuffer, useWorker: false }).promise;
 
       let text = "";
