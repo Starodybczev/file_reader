@@ -1,11 +1,85 @@
 @charset "UTF-8";
-/* Основной контейнер страницы */
+body {
+  background-color: black;
+  color: white;
+}
+
+.body_select_file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #36454F;
+  padding: 10px;
+  background-color: #36454F;
+  color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 300px;
+  max-width: 600px;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.upload_box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upload_box .file_added {
+  width: 125px;
+  color: transparent;
+  cursor: pointer;
+}
+.upload_box .file_added::file-selector-button {
+  cursor: pointer;
+  background-color: #3D0C02;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 10px;
+  transition: 1s;
+}
+.upload_box .file_added::file-selector-button:hover {
+  transform: scale(1.05);
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #49160c;
+}
+.upload_box .status_bar {
+  margin-top: 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.upload_box .status_bar.empty {
+  color: #ff4d4d;
+}
+.upload_box .status_bar.active {
+  color: #2ecc71;
+}
+
+.content_file {
+  background-color: rgb(207, 204, 204);
+  padding: 10px;
+  color: black;
+  border-radius: 7px;
+}
+
 .check-container {
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  color: #ffffff;
+}
+.check-container h1 {
+  padding: 10px;
 }
 
 /* Сетка для расположения контента и оценки */

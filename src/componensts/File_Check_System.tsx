@@ -20,18 +20,21 @@ export default function File_Create() {
     };
 
     const file = txtFile || wordFile || pdfFile || htmlFile;
-    
+
 
     const evaluation = useFileEvaluator(file?.content);
 
-return (
+    return (
         <div className="check-container">
-            <h1>Проверка практических работ</h1>
-            <input type="file" onChange={handleFileChange} className="file-input" />
+            <div className="upload_box">
+                <h1>Проверка практических работ</h1>
+                <input className="file_added" type="file" onChange={handleFileChange} />
+                <p className={`status_bar ${file ? `active` : `empty`}`}>{file ? `${file.name}` : `файл не выбран`}</p>
+            </div>
 
             {file && (
                 <div className="check-layout">
-                    
+
                     <div className="file-viewer">
                         <h3 className="file-title">Файл: {file.name}</h3>
                         <div className="content-box">
@@ -41,8 +44,8 @@ return (
                         </div>
                     </div>
 
-                    <div 
-                        className="score-card" 
+                    <div
+                        className="score-card"
                         style={{ borderTopColor: evaluation?.color || '#ccc' }}
                     >
                         {evaluation ? (
@@ -55,12 +58,12 @@ return (
                                 </div>
 
                                 <div className="progress-container">
-                                    <div 
-                                        className="progress-bar" 
-                                        style={{ 
-                                            width: `${evaluation.score}%`, 
-                                            backgroundColor: evaluation.color 
-                                        }} 
+                                    <div
+                                        className="progress-bar"
+                                        style={{
+                                            width: `${evaluation.score}%`,
+                                            backgroundColor: evaluation.color
+                                        }}
                                     />
                                 </div>
 

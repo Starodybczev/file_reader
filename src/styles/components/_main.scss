@@ -1,0 +1,74 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.body_select_file{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #36454F;
+    padding: 10px;
+    background-color: #36454F;
+    color: white;
+    width: fit-content;
+    min-width: 300px;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.upload_box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .file_added {
+        width: 125px; // Ограничиваем ширину, чтобы скрыть "пустое место" от надписи
+        color: transparent; // СКРЫВАЕТ стандартный текст "Файл не выбран"
+        cursor: pointer;
+
+        &::file-selector-button {
+            cursor: pointer;
+            background-color: #3D0C02;
+            border: none;
+            border-radius: 7px;
+            color: white;
+            padding: 10px;
+            transition: 1s;
+
+            &:hover {
+                transform: scale(1.05);
+                padding: 12px;
+                border-radius: 10px;
+                background-color: #49160c;
+            }
+        }
+    }
+
+    .status_bar {
+        margin-top: 10px;
+        font-weight: bold;
+        transition: color 0.3s ease;
+
+        &.empty {
+            color: #ff4d4d; // Яркий красный для черного фона
+        }
+
+        &.active {
+            color: #2ecc71; // Сочный зеленый
+        }
+    }
+}
+
+
+.content_file{
+    background-color: rgb(207, 204, 204);
+    padding: 10px;
+    color: black;
+    border-radius: 7px;
+}
