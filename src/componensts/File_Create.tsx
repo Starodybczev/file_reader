@@ -38,7 +38,11 @@ export default function File_Create() {
                 <p className={`status_bar ${file ? `active` : `empty`}`}>{file ? `${file.name}` : `файл не выбран`}</p>
             </div>
 
-            <div className="content_file"><pre>{file ? file.content : ""}</pre></div>
+            {file && <div className="content_file">
+                {file && file.content && (
+                    <pre>{file.content}</pre>
+                )}
+            </div>}
         </div>
     )
 }
